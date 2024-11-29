@@ -314,8 +314,8 @@ function Puzzle({
   }
 
   useKeydown(true, {
-    ArrowUp: () => winnerify(handleJumpIn),
-    ArrowDown: () => winnerify(handleJumpOut),
+    ArrowDown: () => winnerify(handleJumpIn),
+    ArrowUp: () => winnerify(handleJumpOut),
     ArrowLeft: () => winnerify(rotateLeft),
     ArrowRight: () => winnerify(rotateRight),
   });
@@ -405,7 +405,7 @@ function Puzzle({
           </div>
         </div>
         <div className='dpad'>
-          <button className='dpad-button up' onClick={() => handleJumpIn()} />
+          <button className='dpad-button up' onClick={() => handleJumpOut()} />
           <div className='dpad-middle'>
             <button className='dpad-button left' onClick={() => rotateLeft()} />
             <button
@@ -413,10 +413,7 @@ function Puzzle({
               onClick={() => rotateRight()}
             />
           </div>
-          <button
-            className='dpad-button down'
-            onClick={() => handleJumpOut()}
-          />
+          <button className='dpad-button down' onClick={() => handleJumpIn()} />
         </div>
       </div>
     </>
