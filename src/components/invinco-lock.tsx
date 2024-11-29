@@ -329,8 +329,6 @@ function Puzzle({
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    console.log(dialogRef?.current);
-
     if (!!dialogRef?.current && isWinner) {
       dialogRef.current.showModal();
     }
